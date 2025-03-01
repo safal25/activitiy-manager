@@ -202,6 +202,43 @@
   color: #e0e0e0;
 }
 
+.loading {
+  margin: 2rem 0;
+  font-size: 1.2rem;
+  color: #666;
+}
+
+.darkMain .loading {
+  color: #aaa;
+}
+
+.errorMessage {
+  margin: 1rem 0;
+  padding: 1rem;
+  background-color: #ffebee;
+  color: #c62828;
+  border-radius: 4px;
+  font-size: 1rem;
+  text-align: center;
+  max-width: 900px;
+  width: 100%;
+}
+
+.darkMain .errorMessage {
+  background-color: #3f1f1f;
+  color: #ff8a80;
+}
+
+.emptyTable {
+  text-align: center;
+  padding: 2rem 0;
+  color: #666;
+}
+
+.darkTaskTable .emptyTable {
+  color: #aaa;
+}
+
 @media (max-width: 600px) {
   .grid {
     width: 100%;
