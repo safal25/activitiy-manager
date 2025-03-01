@@ -2,22 +2,31 @@
 import type { NextPage } from "next";
 import Head from "next/head";
 import styles from "../styles/Home.module.css";
+import { useTheme } from "../contexts/ThemeContext";
 
 const Home: NextPage = () => {
+  const { darkMode, toggleDarkMode } = useTheme();
+
   return (
-    <div className={styles.container}>
+    <div className={`${styles.container} ${darkMode ? styles.darkContainer : ''}`}>
       <Head>
         <title>Activity Manager</title>
         <meta name="description" content="Activity Manager for tracking learning and work tasks" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className={styles.main}>
+      <div className={styles.themeToggle}>
+        <button onClick={toggleDarkMode} className={styles.themeButton}>
+          {darkMode ? '☀️ Light Mode' : '🌙 Dark Mode'}
+        </button>
+      </div>
+
+      <main className={`${styles.main} ${darkMode ? styles.darkMain : ''}`}>
         <h1 className={styles.title}>Activity Manager</h1>
         
-        <div className={styles.taskSection}>
+        <div className={`${styles.taskSection} ${darkMode ? styles.darkTaskSection : ''}`}>
           <h2>Today's Learning Tasks</h2>
-          <table className={styles.taskTable}>
+          <table className={`${styles.taskTable} ${darkMode ? styles.darkTaskTable : ''}`}>
             <thead>
               <tr>
                 <th>Task Name</th>
@@ -44,9 +53,9 @@ const Home: NextPage = () => {
           </table>
         </div>
 
-        <div className={styles.taskSection}>
+        <div className={`${styles.taskSection} ${darkMode ? styles.darkTaskSection : ''}`}>
           <h2>Today's Work Tasks</h2>
-          <table className={styles.taskTable}>
+          <table className={`${styles.taskTable} ${darkMode ? styles.darkTaskTable : ''}`}>
             <thead>
               <tr>
                 <th>Task Name</th>

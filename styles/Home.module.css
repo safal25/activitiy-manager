@@ -140,6 +140,68 @@
   background-color: #f1f1f1;
 }
 
+/* Dark Mode Styles */
+.darkContainer {
+  background-color: #121212;
+  color: #e0e0e0;
+}
+
+.darkMain {
+  background-color: #121212;
+  color: #e0e0e0;
+}
+
+.darkTaskSection h2 {
+  color: #e0e0e0;
+}
+
+.darkTaskTable {
+  border-color: #444;
+}
+
+.darkTaskTable th,
+.darkTaskTable td {
+  border-color: #444;
+  color: #e0e0e0;
+}
+
+.darkTaskTable th {
+  background-color: #2d2d2d;
+}
+
+.darkTaskTable tr:nth-child(even) {
+  background-color: #1e1e1e;
+}
+
+.darkTaskTable tr:hover {
+  background-color: #333;
+}
+
+.themeToggle {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.themeButton {
+  background-color: transparent;
+  border: 1px solid #666;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+}
+
+.themeButton:hover {
+  background-color: rgba(128, 128, 128, 0.2);
+}
+
+.darkContainer .themeButton {
+  border-color: #999;
+  color: #e0e0e0;
+}
+
 @media (max-width: 600px) {
   .grid {
     width: 100%;
