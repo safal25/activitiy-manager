@@ -108,9 +108,50 @@
   margin-left: 0.2rem;
 }
 
+.taskSection {
+  width: 100%;
+  max-width: 900px;
+  margin: 2rem 0;
+}
+
+.taskTable {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+}
+
+.taskTable th,
+.taskTable td {
+  border: 1px solid #eaeaea;
+  padding: 12px 15px;
+  text-align: left;
+}
+
+.taskTable th {
+  background-color: #f8f9fa;
+  font-weight: bold;
+}
+
+.taskTable tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.taskTable tr:hover {
+  background-color: #f1f1f1;
+}
+
 @media (max-width: 600px) {
   .grid {
     width: 100%;
     flex-direction: column;
+  }
+  
+  .taskTable {
+    font-size: 0.9rem;
+  }
+  
+  .taskTable th,
+  .taskTable td {
+    padding: 8px 10px;
   }
 }
