@@ -70,7 +70,7 @@ const Home: NextPage = () => {
             <div
               className={`${styles.taskSection} ${darkMode ? styles.darkTaskSection : ""}`}
             >
-              <h2>Today's Learning Tasks</h2>
+              <h2>Today&apos;s Learning Tasks</h2>
               <table
                 className={`${styles.taskTable} ${darkMode ? styles.darkTaskTable : ""}`}
               >
@@ -118,7 +118,7 @@ const Home: NextPage = () => {
             <div
               className={`${styles.taskSection} ${darkMode ? styles.darkTaskSection : ""}`}
             >
-              <h2>Today's Work Tasks</h2>
+              <h2>Today&apos;s Work Tasks</h2>
               <table
                 className={`${styles.taskTable} ${darkMode ? styles.darkTaskTable : ""}`}
               >
