@@ -78,7 +78,19 @@ const Home: NextPage = () => {
                   {learningTasks.length > 0 ? (
                     learningTasks.map(task => (
                       <tr key={task.id}>
-                        <td>{task.name}</td>
+                        <td>
+                          {task.subject === "System Design" ? (
+                            <a 
+                              href={`https://github.com/karanpratapsingh/system-design?tab=readme-ov-file#${task.name.toLowerCase().replace(/\s+/g, '-')}`}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                            >
+                              {task.name}
+                            </a>
+                          ) : (
+                            task.name
+                          )}
+                        </td>
                         <td>{task.description}</td>
                         <td>{task.status}</td>
                         <td>{task.subject}</td>
