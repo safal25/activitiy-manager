@@ -89,8 +89,9 @@ const Home: NextPage = () => {
                         <td>
                           {task.subject === "System Design" ? (
                             <a
-                              href={`https://github.com/karanpratapsingh/system-design?tab=readme-ov-file#${task.name.toLowerCase().replace(/\s+/g, "-")}`}
+                              href={`https://github.com/karanpratapsingh/system-design?tab=readme-ov-file#${task.name.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "")}`}
                               target="_blank"
+                              rel="noopener noreferrer"
                             >
                               {task.name}
                             </a>
