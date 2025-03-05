@@ -1,4 +1,7 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {}
+const nextConfig = {
+    basePath: '/activity-manager',
+    assetPrefix: '/activity-manager/',
+}
 
 module.exports = nextConfig
